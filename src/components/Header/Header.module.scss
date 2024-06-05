@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    justify-content: center;
+    color: var(--var-fc);
+    background: var(--var-header-bg);
+    width: 1920px;
+    padding: 40px 0;
+
+    .overHeader {
+
+        width: 1240px;
+        display: flex;
+        justify-content: space-between;
+
+        .logoHeader * {
+            fill: var(--ver-imgColor);
+        }
+
+        .logoHeader:hover {
+            background: none;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            background: none;
+            fill: var(--ver-imgColor);
+        }
+    }
+}
