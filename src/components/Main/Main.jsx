@@ -1,5 +1,6 @@
 import React from 'react'
-import './Main.modul.scss'
+import styles from './Main.module.scss'
+import { ReactComponent as VectorArrow } from '../img/VectorArrow.svg';
 export default function Main({ photo, loading }) {
     if (loading) {
         return <h2>Loading...</h2>
@@ -10,17 +11,19 @@ export default function Main({ photo, loading }) {
             <div className='overMain'>
                 <div className='block-input'>
 
-                    <div className='widthPhoto'>
+                    <div className={styles.widthPhoto}>
                         {
                             photo.map((elPhotos, i) => (
-                                <div className='photoInfo'>
-                                    <img src={elem + elPhotos.imageUrl} alt='' key={i} className='overPhotoclass' />
-                                    <div className='overInfoPhoto'>
+                                <div className={styles.photoInfo}>
+                                    <img src={elem + elPhotos.imageUrl} alt='' key={i} className={styles.overPhotoclass} />
+                                    <div className={styles.overInfoPhoto}>
 
-                                        <div>
+                                        <div className={styles.block}>
                                             <p>{elPhotos.name}</p>
-                                            <p className='data'>{elPhotos.created}</p>
+                                            <p className={styles.data}>{elPhotos.created}</p>
+                                            
                                         </div>
+                                        <button><VectorArrow/></button>
                                     </div>
                                 </div>
                             ))

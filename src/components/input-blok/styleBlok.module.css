@@ -1,0 +1,32 @@
+.overInputBlok {
+  width: 100%;
+  height: 36px;
+  display: grid;
+  grid-template-columns: repeat(1, 400px);
+  justify-content: end;
+  width: 1240px;
+}
+.overInputBlok .boxSearch {
+  width: 372px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.overInputBlok .boxSearch .input {
+  width: 336px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid var(--var-border);
+  background-color: var(--var-object);
+}
+.overInputBlok .boxSearch button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  margin-left: 35px;
+  background: var(--var-button);
+}
+.overInputBlok .boxSearch button .colorSettings * {
+  fill: var(--ver-imgColor);
+}/*# sourceMappingURL=styleBlok.modul.css.map */
