@@ -11,11 +11,17 @@
         grid-template-columns: repeat(2, 1fr);
 
         .input {
-            width: 336px;
+            width: 300px;
             height: 36px;
             border-radius: 4px;
             border: 1px solid var(--var-border);
             background-color: var(--var-object);
+            padding-left: 40px;
+
+            i {
+                position: absolute;
+                top: 10px;
+            }
         }
 
 
@@ -51,7 +57,7 @@
                 height: 36px;
             }
 
-            button{
+            button {
                 margin-left: 15px;
             }
         }

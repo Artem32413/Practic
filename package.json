@@ -21,8 +21,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      
     ]
   },
   "browserslist": {
@@ -49,5 +48,6 @@
     "globals": "^15.4.0",
     "ttypescrip": "^5.4.5",
     "typescript-eslint": "^7.12.0"
+    
   }
 }

@@ -19,7 +19,7 @@ export default function Main({ photo, loading }) {
                                     <div className={styles.overInfoPhoto}>
 
                                         <div className={styles.block}>
-                                            <p>{elPhotos.name}</p>
+                                            <p className={styles.nameText}>{elPhotos.name}</p>
                                             <p className={styles.data}>{elPhotos.created}</p>
                                             
                                         </div>

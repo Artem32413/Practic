@@ -4,6 +4,7 @@ import Pagination from "./components/Pagination/Pagination";
 import InputBlok from "./components/input-blok/InputBlok";
 import Menu from "./components/Menu/Menu";
 import React, { useEffect, useState } from 'react'
+// import { filterTitles } from './components/Input-blok/InputBlok';
 import { useTheme } from './hooks/use-theme'
 import axios from 'axios'
 function App() {
@@ -28,7 +29,7 @@ function App() {
   const currentPhoto = photo.slice(firstPhotoIndex, lastPhotoIndex)
 
   const paginate = pageNumber => setСurrentPage(pageNumber)
-
+  // filterTitles.map((title, index) => {
   return (
 
     <div className="wrapper">
@@ -43,6 +44,7 @@ function App() {
     </div>
 
   );
+  // })
 }
 
 export default App;
