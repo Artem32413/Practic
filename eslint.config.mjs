@@ -9,6 +9,6 @@ export default [
   {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
+  { files: ["**/*.tsx"], languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
   ...fixupConfigRules(pluginReactConfig),
-  {"extends": "airbnb-base/legacy"}
 ];
