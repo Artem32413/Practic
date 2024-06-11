@@ -42,12 +42,18 @@
                     grid-template-columns: repeat(1, 1fr);
                     grid-template-rows: repeat(3, 1fr);
                     font-family: "Cormorant SC", serif;
+
                     li {
                         margin: 10px;
-                        display: flex;
-                        justify-content: space-between;
-
-
+                        display: grid;
+                        grid-template-columns: repeat(2, 230px);
+                        grid-template-rows: repeat(1, 30px);
+                        align-items: center;
+                        button{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }   
                     }
                 }
 
@@ -69,4 +75,36 @@
 .activeMenu {
     display: block;
 
+}
+
+.activeSelect {
+    font-family: "Inter", sans-serif;
+    display: block;
+    color: #9C9C9C;
+    width: 290px;
+    height: 36px;
+    border-radius: 4px;
+    border: #DEDEDE;
+    padding-left: 20px;
+}
+
+.noSelect {
+    display: none;
+}
+
+
+
+.activeSelect2 {
+    font-family: "Inter", sans-serif;
+    display: block;
+    color: #9C9C9C;
+    width: 290px;
+    height: 36px;
+    border-radius: 4px;
+    border: #DEDEDE;
+    padding-left: 20px;
+}
+
+.noSelect2 {
+    display: none;
 }

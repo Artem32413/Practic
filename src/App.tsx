@@ -37,7 +37,7 @@ function App(): JSX.Element {
 
   return (
     <div className="wrapper">
-      <Menu isOpen={false} onClose={() => {}}/>
+      <Menu isOpen={false} onClose={() => { }} />
       <Header />
       <InputBlok />
       <Main photo={currentPhoto} loading={loading} />

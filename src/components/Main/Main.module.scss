@@ -44,13 +44,15 @@ main {
                 .data {
                     color: var(--var-main-border);
                     font-size: 12px;
-
+                    
                 }
-                .nameText{
+
+                .nameText {
                     font-family: "Cormorant SC", serif;
                     font-size: 19px;
-                 line-height: 19.38px;
+                    line-height: 19.38px;
                 }
+
                 p {
                     margin-left: 20px;
                     transition: 0.3s;
