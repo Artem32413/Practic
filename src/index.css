@@ -15,6 +15,7 @@ html[data-theme='light'] {
   --var-border: #DEDEDE;
   --ver-imgColor: black;
   --var-button: #ebebeb;
+  --var-search: white;
 }
 
 html[data-theme='dark'] {
@@ -28,6 +29,7 @@ html[data-theme='dark'] {
   --var-border: black;
   --ver-imgColor: #DEDEDE;
   --var-button: #1A1818;
+  --var-search: #1A1818;
 }
 
 body {

@@ -1,13 +1,12 @@
 .menu {
     display: flex;
     justify-content: end;
-    width: 100%;
     color: var(--var-fc);
     display: none;
 
     .positionMenu {
 
-        width: 76.1vh;
+        width: 76.9vh;
         height: 99%;
         background-color: var(--var-border);
         position: absolute;
@@ -25,6 +24,10 @@
                 width: 400px;
                 height: 128px;
 
+                .closeBig * {
+                    fill: var(--ver-imgColor);
+                }
+
                 .closeButton {
                     position: absolute;
                     right: 200px;
@@ -40,20 +43,95 @@
                 .siUl1 {
                     display: grid;
                     grid-template-columns: repeat(1, 1fr);
-                    grid-template-rows: repeat(3, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
                     font-family: "Cormorant SC", serif;
 
                     li {
+                        font-size: 25px;
                         margin: 10px;
                         display: grid;
                         grid-template-columns: repeat(2, 230px);
                         grid-template-rows: repeat(1, 30px);
                         align-items: center;
-                        button{
+
+                        button {
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                        }   
+
+                            .minus * {
+                                transition: 3s;
+                                fill: var(--ver-imgColor);
+                            }
+
+                            .plus * {
+                                fill: var(--ver-imgColor);
+                            }
+                        }
+                    }
+                }
+
+                .siUl2 {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+                    font-family: "Cormorant SC", serif;
+
+                    li {
+                        font-size: 25px;
+                        margin: 10px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 230px);
+                        grid-template-rows: repeat(1, 30px);
+                        align-items: center;
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .minus * {
+                                transition: 3s;
+                                fill: var(--ver-imgColor);
+                            }
+
+                            .plus * {
+                                fill: var(--ver-imgColor);
+                            }
+                        }
+                    }
+                }
+
+                .siUl3 {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+                    font-family: "Cormorant SC", serif;
+
+                    li {
+                        font-size: 25px;
+                        margin: 10px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 230px);
+                        grid-template-rows: repeat(1, 30px);
+                        align-items: center;
+
+                        div {}
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            .minus * {
+                                transition: 3s;
+                                fill: var(--ver-imgColor);
+                            }
+
+                            .plus * {
+                                fill: var(--ver-imgColor);
+                            }
+                        }
                     }
                 }
 
@@ -74,7 +152,7 @@
 
 .activeMenu {
     display: block;
-
+    transition: 3s;
 }
 
 .activeSelect {
@@ -92,19 +170,26 @@
     display: none;
 }
 
+.divClass {
+    display: grid;
+    grid-template-columns: 67px 20px 67px;
+    align-items: center;
+    justify-content: space-evenly;
 
+    .activesearch3 {
+        padding-left: 15px;
+        border-radius: 4px;
+        height: 36px;
+        color: #9C9C9C;
+        border: #DEDEDE;
+    }
 
-.activeSelect2 {
-    font-family: "Inter", sans-serif;
-    display: block;
-    color: #9C9C9C;
-    width: 290px;
-    height: 36px;
-    border-radius: 4px;
-    border: #DEDEDE;
-    padding-left: 20px;
+    .blockDiv {
+        width: 16px;
+        border-top: #575757 solid 2px;
+    }
 }
 
-.noSelect2 {
+.noSelect3 {
     display: none;
 }

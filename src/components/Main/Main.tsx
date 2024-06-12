@@ -34,7 +34,7 @@ const Main: FC<MainProps> = ({ photo, loading }) => {
                     <p className={styles.nameText}>{elPhotos.name}</p>
                     <p className={styles.data}>{elPhotos.created}</p>
                   </div>
-                  <button><VectorArrow/></button>
+                  <button><VectorArrow /></button>
                 </div>
               </div>
             ))}
