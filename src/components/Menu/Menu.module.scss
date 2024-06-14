@@ -1,16 +1,15 @@
 .menu {
-    display: flex;
-    justify-content: end;
+   
     color: var(--var-fc);
     display: none;
 
     .positionMenu {
-
-        width: 76.9vh;
+        width: 74.9vh;
         height: 99%;
         background-color: var(--var-border);
         position: absolute;
         top: 10px;
+        left: 62.3%;
 
         .marginBlock {
             height: 700px;
@@ -115,8 +114,6 @@
                         grid-template-columns: repeat(2, 230px);
                         grid-template-rows: repeat(1, 30px);
                         align-items: center;
-
-                        div {}
 
                         button {
                             display: flex;

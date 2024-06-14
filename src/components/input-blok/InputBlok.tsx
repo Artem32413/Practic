@@ -19,8 +19,8 @@ export default function InputBlok() {
   return (
     <div className={styles.overInputBlok}>
       <div className={styles.boxSearch}>
-        <div>
-          <input type='text' className={styles.input} placeholder="Painting title" onChange={handleChange}/>
+        <div className={styles.positionIcon}>
+          <input type='text' className={styles.input} placeholder="Painting title" onChange={handleChange} autoComplete='off'/>
           <i>
             <Serch className={styles.serch} />
           </i>

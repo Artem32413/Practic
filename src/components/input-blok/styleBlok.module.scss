@@ -1,15 +1,17 @@
 .overInputBlok {
-    height: 36px;
+    height: 38px;
     display: grid;
-    grid-template-columns: repeat(1, 400px);
+    grid-template-columns: repeat(1, 385px);
     justify-content: end;
     width: 1240px;
 
     .boxSearch {
         width: 372px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
+        grid-template-columns: 325px 1px;
+        .positionIcon {
+            display: flex;
+            align-items: center;
         .input {
             width: 300px;
             height: 36px;
@@ -18,13 +20,21 @@
             background-color: var(--var-search);
             padding-left: 40px;
             font-family: "Inter", sans-serif;
-            i {
-                position: absolute;
-                top: 10px;
+           
+        }
+        i {
+            position: absolute;
+            padding-left: 12px;
+
+            .serch {
+                display: flex;
+            }
+
+            .serch * {
+                fill: var(--ver-imgColor);
             }
         }
-
-
+    }
         button {
             cursor: pointer;
             border: none;
@@ -67,5 +77,6 @@
 @media (min-width: 768px) and (max-width: 1023px) {
     .overInputBlok {
         width: 715px;
+        
     }
 }
