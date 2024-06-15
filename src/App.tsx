@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Pagination from "./components/Pagination/Pagination";
 import InputBlok from "./components/input-blok/InputBlok";
-import Menu from "./components/Menu/Menu";
-import axios from 'axios';
+import axios from "axios";
 
 interface Photo {
   id: number;
@@ -22,10 +21,12 @@ function App(): JSX.Element {
   useEffect(() => {
     const getPhoto = async (): Promise<void> => {
       setLoading(true);
-      const res = await axios.get<Photo[]>('https://test-front.framework.team/paintings');
+      const res = await axios.get<Photo[]>(
+        "https://test-front.framework.team/paintings",
+      );
       setPhoto(res.data);
       setLoading(false);
-    }
+    };
     getPhoto();
   }, []);
 
@@ -34,17 +35,20 @@ function App(): JSX.Element {
   const currentPhoto: Photo[] = photo.slice(firstPhotoIndex, lastPhotoIndex);
 
   const paginate = (pageNumber: number): void => setСurrentPage(pageNumber);
-
+  const nextPage = (): void => setСurrentPage((prev) => prev + 1);
+  const prevPage = (): void => setСurrentPage((prev) => prev - 1);
   return (
     <div className="wrapper">
-      <Menu isOpen={false} onClose={() => { }} />
       <Header />
       <InputBlok />
       <Main photo={currentPhoto} loading={loading} />
       <Pagination
         photoPerPage={photoPerPage}
         totalPhotos={photo.length}
-        paginate={paginate} />
+        paginate={paginate}
+        nextPage={nextPage}
+        prevPage={prevPage}
+      />
     </div>
   );
 }

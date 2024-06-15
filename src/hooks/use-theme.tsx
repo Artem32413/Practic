@@ -7,7 +7,7 @@ interface ThemeState {
 
 export const useTheme = (): ThemeState => {
   const [theme, setTheme] = useState<string>(
-    localStorage.getItem("app-theme") || "light"
+    localStorage.getItem("app-theme") || "light",
   );
 
   useLayoutEffect(() => {
