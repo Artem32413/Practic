@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "axios": "^1.7.2",
@@ -10,7 +11,7 @@
     "package.json": "^0.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "",
     "server.js": "^1.0.0",
     "tsconfig.json": "^1.0.11"
   },

@@ -3,30 +3,23 @@ import styles from "./styleBlok.module.scss";
 import { ReactComponent as Settings } from "../img/Settings.svg";
 import { ReactComponent as Serch } from "../img/serch.svg";
 import Menu from "../Menu/Menu";
-
-export default function InputBlok() {
-  const [value, setValue] = useState<string>("");
+import Input from "./Input";
+export default function InputBlok( {onInputChange}: {onInputChange: (value: string) => void} ) {
+  // const [value, setValue] = useState<string>("");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+  const [value, setValue] = useState<string>("");
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
+  
 
   return (
     <div className={styles.overInputBlok}>
       <div className={styles.boxSearch}>
         <div className={styles.positionIcon}>
-          <input
-            type="text"
-            className={styles.input}
-            placeholder="Painting title"
-            onChange={handleChange}
-            autoComplete="off"
-          />
+         
+          <Input onChange={onInputChange} />
           <i>
             <Serch className={styles.serch} />
           </i>

@@ -58,13 +58,14 @@
   .overInputBlok {
     display: flex;
     justify-content: center;
-    width: 250px;
+    width: 280px;
     height: 33px;
 
     .boxSearch {
-      width: 260px;
+      display: grid;
+      grid-template-columns: 215px 1px;
       height: 33px;
-      padding-left: 0px;
+      margin-top: -6px;
 
       #settingsBtn {
         margin-left: 15px;
@@ -83,6 +84,12 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .overInputBlok {
-    width: 715px;
+    width: 800px;
+
+    .boxSearch {
+      width: 372px;
+      display: grid;
+      grid-template-columns: 275px 1px;
+    }
   }
 }

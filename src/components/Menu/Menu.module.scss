@@ -201,16 +201,42 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
     .menu {
+
         .positionMenu {
             height: 140%;
             top: 10px;
             left: 34.3%;
 
-            .closeButton {
-                position: absolute;
-                right: 220px;
-                top: 80px;
+            .marginBlock {
+                margin: 15px;
 
+                .menuContent {
+                    li {
+                        font-size: 25px;
+                        margin: 10px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 202px);
+                        grid-template-rows: repeat(1, 30px);
+                        align-items: center;
+                        font-size: 12px;
+
+                        button {
+                            display: flex;
+                            align-items: center;
+
+                        }
+                    }
+
+                    .closeButton {
+                        position: absolute;
+                        right: 180px;
+                        top: 80px;
+
+                        .siUl1 {
+                            font-size: 12px;
+                        }
+                    }
+                }
             }
         }
     }

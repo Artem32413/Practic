@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import arrow from "../img/arrow_icon.svg";
+import { ReactComponent as Arrow } from "../img/arrow_icon.svg";
 import PaginationStyles from "./Pagination.module.scss";
 
 interface PaginationProps {
@@ -32,7 +32,7 @@ const Pagination: FC<PaginationProps> = ({
     <footer>
       <ul className={PaginationStyles.pageListUl} >
         <button id="buttonHendler" className={PaginationStyles.btn} onClick={prevPage}>
-          <img src={arrow} alt="arrow" />
+          <Arrow className={PaginationStyles.arrow} />
         </button>
         {pageNumbers.map((number) => (
           <li className="page-item" key={number}>
@@ -42,7 +42,7 @@ const Pagination: FC<PaginationProps> = ({
           </li>
         ))}
         <button id="buttonHendler" className={PaginationStyles.btn2} onClick={nextPage}>
-          <img src={arrow} alt="arrow" />
+          <Arrow className={PaginationStyles.arrow2} />
         </button>
       </ul>
     </footer>

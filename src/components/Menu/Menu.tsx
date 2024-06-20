@@ -18,13 +18,17 @@ interface Locations {
   id: number;
   location: string;
 }
-const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
+type InputProps = {
+  onChange: (newValue: string) => void;
+};
+
+const Menu: FC<MenuProps> = ({ isOpen, onClose }, { onChange }: InputProps) => {
   const [isSelectOpen, setIsSelectOpen] = useState<boolean>(false);
   const [isSelectOpen2, setIsSelectOpen2] = useState<boolean>(false);
   const [isSelectOpen3, setIsSelectOpen3] = useState<boolean>(false);
   const [artists, setArtists] = useState<Authors[]>([]);
   const [locations, setLocations] = useState<Locations[]>([]);
-
+  const [selectedArtist, setSelectedArtist] = useState<string>("");
   const toggleSelect = (): void => {
     setIsSelectOpen(!isSelectOpen);
   };
@@ -44,6 +48,7 @@ const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
       const resArtists = await axios.get<Authors[]>(
         "https://test-front.framework.team/authors",
       );
+
       setArtists(resArtists.data);
     };
     getArtists();
@@ -55,9 +60,15 @@ const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
       setLocations(resLocations.data);
     };
     getLocations();
+    Promise.all([getArtists(), getLocations()])
+      .then(([getArtists, getLocations]) => {
+
+      }).catch((error) => {
+        console.error(error);
+
+      });
   }, []);
-  //authors
-  //locations
+
   const modalMenu = document.getElementById("modal");
   return modalMenu
     ? createPortal(
@@ -85,10 +96,12 @@ const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
                     className={
                       !isSelectOpen ? styles.noSelect : styles.activeSelect
                     }
+                    value={selectedArtist}
+                    onChange={(e) => setSelectedArtist(e.target.value)}
                   >
                     <option>Select the artist</option>
                     {artists.map((elArtists: any, i: number) => (
-                      <option key={i}>{`${elArtists.name}`}</option>
+                      <option key={i} value={elArtists.id}  >{`${elArtists.name}`}</option>
                     ))}
                   </select>
                 </li>
@@ -111,7 +124,8 @@ const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
                   >
                     <option>Select the location</option>
                     {locations.map((elLocations: any, i: number) => (
-                      <option key={i}>{`${elLocations.locations}`}</option>
+                      <option key={i}>{`${elLocations.locations}`} </option>
+
                     ))}
                   </select>
                 </li>
